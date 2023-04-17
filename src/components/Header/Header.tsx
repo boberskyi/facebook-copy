@@ -1,7 +1,19 @@
 import headerStyle from './header.module.css';
-import {Link} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
+type navLinksType = {
+  path: string,
+  title: string
+}
 
 export const Header = () => {
+  const navLinks:navLinksType[] = [
+    {path: "/", title: 'Main'},
+    {path: "/marketplace", title: 'Marketplace'},
+    {path: "/groups", title: 'Groups'},
+    {path: "/events", title: 'Events'}
+  ];
+
   return (
     <header className={headerStyle.header}>
       <div className={"container"}>
@@ -25,12 +37,21 @@ export const Header = () => {
             </a>
           </div>
 
-          <div className={headerStyle.headerCenter}>
-            <Link to="/">Main</Link>
-            <Link to="/marketplace">Marketplace</Link>
-            <Link to="/groups">Groups</Link>
-            <Link to="/events">Events</Link>
-          </div>
+          <nav className={headerStyle.headerCenter}>
+            {navLinks.map(nLink => {
+              return (
+                <NavLink
+                  to={nLink.path}
+                  className={({ isActive }) => isActive
+                    ? headerStyle.navLinkActive
+                    : headerStyle.navLink}
+                >
+                  {nLink.title}
+                </NavLink>
+              )
+            })}
+
+          </nav>
 
           <div className={headerStyle.headerRight}>
 

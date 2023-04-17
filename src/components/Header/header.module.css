@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
 }
+
 .headerLeft {
   max-width: 360px;
   min-width: 360px;
@@ -15,16 +16,27 @@
   display: flex;
   gap: 12px;
 }
+
 .headerCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .headerRight {
 
 }
+
 .headerWrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navLink {
+  color: #fff;
+}
+
+.navLinkActive {
+  color: red;
 }
