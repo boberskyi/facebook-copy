@@ -1,8 +1,9 @@
 import {FeedPost} from "./FeedPost/FeedPost";
+import styleMain from './main.module.css';
 
 export const Main = () => {
   return (
-    <main className={"main"}>
+    <main className={styleMain.main}>
       <div className={"mainLeft"}></div>
       <div className={"mainCenter"}>
         <FeedPost title="Post 1"/>
