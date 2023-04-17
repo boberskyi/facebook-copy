@@ -1,4 +1,5 @@
 import headerStyle from './header.module.css';
+import {Link} from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -25,7 +26,10 @@ export const Header = () => {
           </div>
 
           <div className={headerStyle.headerCenter}>
-
+            <Link to="/">Main</Link>
+            <Link to="/marketplace">Marketplace</Link>
+            <Link to="/groups">Groups</Link>
+            <Link to="/events">Events</Link>
           </div>
 
           <div className={headerStyle.headerRight}>
