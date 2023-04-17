@@ -1,17 +1,15 @@
-import {FeedPost} from "./FeedPost/FeedPost";
 import styleMain from './main.module.css';
+import {Marketplace} from "./Marketplace/Marketplace";
+import {PostsFeed} from "./PostsFeed/PostsFeed";
 
 export const Main = () => {
   return (
     <main className={styleMain.main}>
       <div className={"mainLeft"}></div>
       <div className={"mainCenter"}>
-        <FeedPost title="Post 1"/>
-        <FeedPost title="Post 2"/>
-        <FeedPost title="Post 3"/>
-        <FeedPost title="Post 4"/>
-        <FeedPost title="Post 5"/>
-        <FeedPost title="Post 6"/>
+        <PostsFeed />
+
+        <Marketplace />
       </div>
       <div className={"mainRight"}></div>
     </main>

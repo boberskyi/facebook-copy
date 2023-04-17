@@ -1,6 +1,6 @@
 import {FC} from "react";
 
-type FeedPostType = {
+export type FeedPostType = {
   title: string
 }
 

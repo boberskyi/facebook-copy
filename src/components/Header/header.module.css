@@ -16,7 +16,9 @@
   gap: 12px;
 }
 .headerCenter {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .headerRight {
 
