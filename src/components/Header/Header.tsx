@@ -1,7 +1,9 @@
 import headerStyle from './header.module.css';
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
+import {v1} from "uuid";
 
 type navLinksType = {
+  id: string,
   path: string,
   title: string,
   ico: JSX.Element,
@@ -11,6 +13,7 @@ type navLinksType = {
 export const Header = () => {
   const navLinks: navLinksType[] = [
     {
+      id: v1(),
       path: "/",
       title: 'Home',
       ico: <svg viewBox="0 0 28 28" height="28" width="28" className={headerStyle.navLinkIco}>
@@ -20,6 +23,7 @@ export const Header = () => {
       end: true
     },
     {
+      id: v1(),
       path: "/marketplace",
       title: 'Marketplace',
       ico: <svg viewBox="0 0 28 28" height="28" width="28" className={headerStyle.navLinkIco}>
@@ -29,6 +33,7 @@ export const Header = () => {
       end: true
     },
     {
+      id: v1(),
       path: "/groups",
       title: 'Groups',
       ico: <svg viewBox="0 0 28 28" width="28" height="28" className={headerStyle.navLinkIco}>
@@ -38,6 +43,7 @@ export const Header = () => {
       end: true
     },
     {
+      id: v1(),
       path: "/events",
       title: 'Events',
       ico: <svg viewBox="0 0 28 28" width="28" height="28" className={headerStyle.navLinkIco}>
@@ -54,7 +60,7 @@ export const Header = () => {
         <div className={headerStyle.headerWrap}>
 
           <div className={headerStyle.headerLeft}>
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
               <svg viewBox="0 0 36 36" height="40" width="40">
                 <defs>
                   <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="gradient">
@@ -67,14 +73,17 @@ export const Header = () => {
                 <path fill="#fff"
                       d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path>
               </svg>
-
-            </a>
+            </Link>
+            <div className={headerStyle.search}>
+              <input type="text"/>
+            </div>
           </div>
 
           <nav className={headerStyle.headerCenter}>
             {navLinks.map(nLink => {
               return (
                 <NavLink
+                  key={nLink.id}
                   end={nLink.end}
                   to={nLink.path}
                   className={({isActive}) => isActive
@@ -83,6 +92,9 @@ export const Header = () => {
                 >
                   <div className={headerStyle.navLinkH}>
                     {nLink.ico}
+                  </div>
+                  <div className={headerStyle.tabText}>
+                    {nLink.title}
                   </div>
                 </NavLink>
               )

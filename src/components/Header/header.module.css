@@ -6,6 +6,7 @@
   height: 56px;
   background-color: #242526;
   display: flex;
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .headerLeft {
@@ -14,6 +15,7 @@
   width: 100%;
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
 .headerCenter {
@@ -33,6 +35,7 @@
 }
 
 .navLink {
+  position: relative;
   height: 100%;
   padding: 5px 0;
 }
@@ -79,4 +82,28 @@
 
 .navLinkActive .navLinkIco {
   fill: #2374e1;
+}
+
+.tabText {
+  padding: 5px 10px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  font-size: 14px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0,0,1,1);
+  color: #1c1e21;
+  opacity: 0;
+}
+
+.navLinkH:hover ~ .tabText {
+  opacity: 1;
+}
+
+.search {
+
 }

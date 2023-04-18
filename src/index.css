@@ -2,6 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+}
+
+body {
+  background-color: #18191a;
+  color: #fff;
 }
 
 a {
