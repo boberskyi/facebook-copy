@@ -10,8 +10,8 @@ export const Main = () => {
       <div className={"mainCenter"}>
         <Routes>
           <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/" element={<PostsFeed/>}/>
-          <Route path="/marketplace" element={<Marketplace />}/>
+          <Route path="/marketplace" element={<PostsFeed/>}/>
+          <Route path="/marketplace/2" element={<Marketplace />}/>
           {/*<Route fallback={<LoadingSpinner />} />*/}
         </Routes>
       </div>

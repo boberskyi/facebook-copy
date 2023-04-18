@@ -4,14 +4,15 @@ import { NavLink } from 'react-router-dom';
 type navLinksType = {
   path: string,
   title: string
+  end: boolean
 }
 
 export const Header = () => {
   const navLinks:navLinksType[] = [
-    {path: "/", title: 'Main'},
-    {path: "/marketplace", title: 'Marketplace'},
-    {path: "/groups", title: 'Groups'},
-    {path: "/events", title: 'Events'}
+    {path: "/marketplace", title: 'Main', end: true},
+    {path: "/marketplace/2", title: 'Marketplace', end: true},
+    {path: "/groups", title: 'Groups', end: true},
+    {path: "/events", title: 'Events', end: true}
   ];
 
   return (
@@ -41,6 +42,7 @@ export const Header = () => {
             {navLinks.map(nLink => {
               return (
                 <NavLink
+                  end={nLink.end}
                   to={nLink.path}
                   className={({ isActive }) => isActive
                     ? headerStyle.navLinkActive
