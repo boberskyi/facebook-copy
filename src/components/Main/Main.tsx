@@ -2,6 +2,8 @@ import styleMain from './main.module.css';
 import {Marketplace} from "./Marketplace/Marketplace";
 import {PostsFeed} from "./PostsFeed/PostsFeed";
 import {Navigate, Route, Routes} from "react-router-dom";
+import {Events} from "./Events/Events";
+import {Groups} from "./Groups/Groups";
 
 export const Main = () => {
   return (
@@ -10,8 +12,10 @@ export const Main = () => {
       <div className={"mainCenter"}>
         <Routes>
           <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/marketplace" element={<PostsFeed/>}/>
-          <Route path="/marketplace/2" element={<Marketplace />}/>
+          <Route path="/" element={<PostsFeed/>}/>
+          <Route path="/marketplace" element={<Marketplace />}/>
+          <Route path="/groups" element={<Groups />}/>
+          <Route path="/events" element={<Events />}/>
           {/*<Route fallback={<LoadingSpinner />} />*/}
         </Routes>
       </div>
