@@ -13,7 +13,7 @@ export const Main = () => {
 
       </div>
     </div>
-  <div className={"mainCenter"}>
+  <main className={styleMain.mainCenter}>
     <Routes>
       <Route path="*" element={<Navigate to="/"/>}/>
       <Route path="/" element={<PostsFeed/>}/>
@@ -22,7 +22,7 @@ export const Main = () => {
       <Route path="/events" element={<Events/>}/>
       {/*<Route fallback={<LoadingSpinner />} />*/}
     </Routes>
-  </div>
+  </main>
   <div className={styleMain.mainRight}>
     <div className={styleMain.mainLRWrapper}>
 

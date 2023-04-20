@@ -1,5 +1,5 @@
 .main {
-  margin-top: 70px;
+  margin-top: 58px;/* edit with styled (height of header)*/
 }
 
 .mainLeft,
@@ -11,7 +11,7 @@
   overflow: hidden;
   position: fixed;
   height: 100vh;
-  top: 56px; /* edit to styled and get height of top panel of header*/
+  top: 58px; /* edit to styled and get height of top panel of header*/
 }
 
 .mainLeft {
@@ -29,4 +29,16 @@
   height: 100%;
   padding-top: 16px;
   overflow-y: auto;
+}
+
+.mainCenter {
+  background: orangered;
+  min-height: 100vh;
+  margin: 58px auto 0; /* edit to styled and get height of top panel of header*/
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  width: 100%;
+  min-width: 500px;/* macbook 1440px - (360 * 2) edit to styled*/
 }
