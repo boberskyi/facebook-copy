@@ -1,26 +1,32 @@
 .main {
-margin-top: 70px;
+  margin-top: 70px;
 }
 
-.mainLeft {
-  background: orangered;
-max-width: 360px;
+.mainLeft,
+.mainRight {
+  background: rgba(0,0,200,.1);
+  max-width: 360px;
   min-width: 280px;
   width: 360px;
   overflow: hidden;
   position: fixed;
   height: 100vh;
-  left: 0;
-  top: 56px;/* edit to styled and get height of top panel of header*/
+  top: 56px; /* edit to styled and get height of top panel of header*/
 }
-.mainLeftWrapper {
+
+.mainLeft {
+  left: 0;
+}
+
+.mainRight {
+  right: 0;
+}
+
+.mainLRWrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding-top: 16px;
   overflow-y: auto;
-}
-.mainRight {
-
 }
