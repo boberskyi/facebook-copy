@@ -1,4 +1,3 @@
-import headerStyle from "../header.module.css";
 import {
   HeaderLeftStyled,
   HeaderLogoStyled,
@@ -6,8 +5,9 @@ import {
   HeaderSearchInputStyled,
   HeaderSearchStyled
 } from "./HeaderLeftStyles";
+import {FC} from "react";
 
-export const HeaderLeft = () => {
+export const HeaderLeft:FC = () => {
   return (
     <HeaderLeftStyled>
 
@@ -51,7 +51,6 @@ export const HeaderLeft = () => {
         </HeaderSearchIcoStyled>
         <HeaderSearchInputStyled
           type="text"
-          className={headerStyle.searchInput}
           placeholder="Search Facebook"
         />
       </HeaderSearchStyled>

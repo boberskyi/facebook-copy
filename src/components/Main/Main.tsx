@@ -7,7 +7,7 @@ import {Groups} from "./Groups/Groups";
 
 export const Main = () => {
   return (
-    <main className={styleMain.main}>
+    <div className={styleMain.main}>
       <div className={styleMain.mainLeft}>
         <div className={styleMain.mainLRWrapper}>
 
@@ -28,6 +28,6 @@ export const Main = () => {
 
     </div>
   </div>
-</main>
+</div>
 )
 }
