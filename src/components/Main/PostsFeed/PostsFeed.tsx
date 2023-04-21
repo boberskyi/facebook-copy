@@ -1,87 +1,14 @@
 import {FeedPost} from "./FeedPost/FeedPost";
-import {v1} from "uuid";
 import {AddPostBlock} from "./AddPost/AddPost";
+import {PostsType} from "../../../App";
+import {FC} from "react";
 
-type PostsType = {
-  id: string,
-  avaAuthor: string,
-  authorName: string,
-  authorLink: string,
-  postDate: string,
-  postText: string,
-  postImage: string,
-  postReactions: any,
-  postComments: any
+type PostsFeedType = {
+  posts: PostsType[]
 }
-export const PostsFeed = () => {
-  const posts: PostsType[] = [
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 1',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 2',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 3',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 4',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 5',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-    {
-      id: v1(),
-      avaAuthor: '',
-      authorName: 'Autor 6',
-      authorLink: '',
-      postDate: '',
-      postText: 'Lorem ipsum',
-      postImage: '',
-      postReactions: '',
-      postComments: ''
-    },
-  ];
+
+export const PostsFeed:FC<PostsFeedType> = ({posts}) => {
+
   return (
     <>
       <AddPostBlock/>

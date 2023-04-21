@@ -4,8 +4,14 @@ import {PostsFeed} from "./PostsFeed/PostsFeed";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Events} from "./Events/Events";
 import {Groups} from "./Groups/Groups";
+import {PostsType} from "../../App";
+import {FC} from "react";
 
-export const Main = () => {
+type MainType = {
+  posts: PostsType[]
+}
+
+export const Main:FC<MainType> = ({posts}) => {
   return (
     <div className={styleMain.main}>
       <div className={styleMain.mainLeft}>
@@ -15,7 +21,7 @@ export const Main = () => {
   <main className={styleMain.mainCenter}>
     <Routes>
       <Route path="*" element={<Navigate to="/"/>}/>
-      <Route path="/" element={<PostsFeed/>}/>
+      <Route path="/" element={<PostsFeed posts={posts}/>}/>
       <Route path="/marketplace" element={<Marketplace/>}/>
       <Route path="/groups" element={<Groups/>}/>
       <Route path="/events" element={<Events/>}/>

@@ -1,6 +1,6 @@
-import {navLinksType} from "../Header";
 import {FC} from "react";
 import {HeaderCenterStyled, HeaderNavLinkHStyled, HeaderNavLinkStyled, HeaderTabTextStyled} from "./HeaderNavStyles";
+import {navLinksType} from "../../../App";
 
 type HeaderNavType = {
   navLinks: navLinksType[]
