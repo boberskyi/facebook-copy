@@ -2,7 +2,7 @@ import {v1} from "uuid";
 import {HeaderStyled, HeaderWrapStyled} from "./HeaderStyles";
 import {HeaderLeft} from "./HeaderLeft/HeaderLeft";
 import {HeaderNav} from "./HeaderNav/HeaderNav";
-import {HeaderRight} from "./HeaderRight/HeaderRight";
+import {HeaderControllsSettings} from "./HeaderRight/HeaderRight";
 import {FC} from "react";
 
 export type navLinksType = {
@@ -63,7 +63,7 @@ export const Header:FC = () => {
         <HeaderWrapStyled>
           <HeaderLeft/>
           <HeaderNav navLinks={navLinks}/>
-          <HeaderRight/>
+          <HeaderControllsSettings/>
         </HeaderWrapStyled>
       </div>
     </HeaderStyled>
