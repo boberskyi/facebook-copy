@@ -1,7 +1,7 @@
 import {FeedPost} from "./FeedPost/FeedPost";
 import {AddPostBlock} from "./AddPost/AddPost";
-import {PostsType} from "../../../App";
 import {FC} from "react";
+import {PostsType} from "../../../index";
 
 type PostsFeedType = {
   posts: PostsType[]

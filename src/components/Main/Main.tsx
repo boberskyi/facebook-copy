@@ -4,8 +4,8 @@ import {PostsFeed} from "./PostsFeed/PostsFeed";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Events} from "./Events/Events";
 import {Groups} from "./Groups/Groups";
-import {PostsType} from "../../App";
 import {FC} from "react";
+import {PostsType} from "../../index";
 
 type MainType = {
   posts: PostsType[]
