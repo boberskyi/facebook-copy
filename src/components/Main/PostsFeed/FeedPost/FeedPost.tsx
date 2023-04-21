@@ -1,4 +1,5 @@
 import {FC} from "react";
+import {FeedPostStyled} from "./FeedPostStyles";
 
 export type FeedPostType = {
   author: string,
@@ -8,7 +9,7 @@ export type FeedPostType = {
 
 export const FeedPost:FC<FeedPostType> = ({author, text, image}) => {
   return (
-    <div className={"post"}>
+    <FeedPostStyled>
       <div className={"postTop"}>
         <div className={"avatarPreview"}></div>
         <div className={"title"}>
@@ -18,6 +19,6 @@ export const FeedPost:FC<FeedPostType> = ({author, text, image}) => {
       </div>
       <div className={"postDescription"}>{text}</div>
       <img src={image} alt={author}/>
-    </div>
+    </FeedPostStyled>
   )
 }
