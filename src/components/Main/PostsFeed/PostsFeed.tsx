@@ -1,5 +1,6 @@
 import {FeedPost} from "./FeedPost/FeedPost";
 import {v1} from "uuid";
+import {AddPostBlock} from "./AddPost/AddPost";
 
 type PostsType = {
   id: string,
@@ -83,6 +84,7 @@ export const PostsFeed = () => {
   ];
   return (
     <>
+      <AddPostBlock/>
       {posts.map(post => {
         return (
           <FeedPost
