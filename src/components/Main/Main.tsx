@@ -10,7 +10,6 @@ export const Main = () => {
     <div className={styleMain.main}>
       <div className={styleMain.mainLeft}>
         <div className={styleMain.mainLRWrapper}>
-
       </div>
     </div>
   <main className={styleMain.mainCenter}>
