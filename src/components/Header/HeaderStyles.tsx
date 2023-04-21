@@ -12,6 +12,7 @@ export const HeaderStyled = styled.header`
 `
 export const HeaderWrapStyled = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  position: relative;
 `

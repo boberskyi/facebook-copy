@@ -2,7 +2,7 @@ import {v1} from "uuid";
 import {HeaderStyled, HeaderWrapStyled} from "./HeaderStyles";
 import {HeaderLeft} from "./HeaderLeft/HeaderLeft";
 import {HeaderNav} from "./HeaderNav/HeaderNav";
-import {HeaderControllsSettings} from "./HeaderRight/HeaderRight";
+import {HeaderControllsSettings} from "./HeaderControllsSettings/HeaderControllsSettings";
 import {FC} from "react";
 
 export type navLinksType = {

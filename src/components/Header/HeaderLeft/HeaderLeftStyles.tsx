@@ -2,8 +2,12 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 export const HeaderLeftStyled = styled.div`
-  max-width: 360px;
-  min-width: 360px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 320px;
+  min-width: 320px;
   width: 100%;
   display: flex;
   gap: 9px;
