@@ -7,8 +7,9 @@ import {
   AddPostStyled,
   AddPostTopStyled
 } from "./AddPostStyles";
+import {FC} from "react";
 
-export const AddPostBlock = () => {
+export const AddPostBlock:FC = () => {
   return (
     <AddPostStyled>
       <AddPostTopStyled>

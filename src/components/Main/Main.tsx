@@ -5,7 +5,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {Events} from "./Events/Events";
 import {Groups} from "./Groups/Groups";
 import {FC} from "react";
-import {PostsType} from "../../index";
+import {PostsType} from "../../redux/state";
 
 type MainType = {
   posts: PostsType[]

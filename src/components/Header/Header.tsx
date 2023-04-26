@@ -3,7 +3,7 @@ import {HeaderLeft} from "./HeaderLeft/HeaderLeft";
 import {HeaderNav} from "./HeaderNav/HeaderNav";
 import {HeaderControllsSettings} from "./HeaderControllsSettings/HeaderControllsSettings";
 import {FC} from "react";
-import {navLinksType} from "../../index";
+import {navLinksType} from "../../redux/state";
 
 type HeaderType = {
   navLinks: navLinksType[]

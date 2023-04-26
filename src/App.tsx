@@ -3,19 +3,18 @@ import './App.css';
 import {Header} from "./components/Header/Header";
 import {Main} from "./components/Main/Main";
 import {BrowserRouter} from "react-router-dom";
-import {navLinksType, PostsType} from "./index";
+import {stateType} from "./redux/state";
 
 type AppType = {
-  navLinks: navLinksType[],
-  posts: PostsType[]
+  state: stateType
 }
 
-const App:FC<AppType> = ({navLinks, posts}) => {
+const App:FC<AppType> = ({state}) => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header navLinks={navLinks}/>
-        <Main posts={posts}/>
+        <Header navLinks={state.navLinks}/>
+        <Main posts={state.posts}/>
       </BrowserRouter>
     </div>
   );

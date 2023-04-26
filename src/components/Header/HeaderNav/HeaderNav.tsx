@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {HeaderCenterStyled, HeaderNavLinkHStyled, HeaderNavLinkStyled, HeaderTabTextStyled} from "./HeaderNavStyles";
-import {navLinksType} from "../../../index";
+import {navLinksType} from "../../../redux/state";
 
 
 type HeaderNavType = {
