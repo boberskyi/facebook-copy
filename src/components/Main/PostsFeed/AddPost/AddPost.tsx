@@ -11,10 +11,19 @@ import {
   AddPostStyled,
   AddPostTopStyled
 } from "./AddPostStyles";
-import {FC, useState} from "react";
+import {ChangeEvent, FC, useState} from "react";
 
 export const AddPostBlock: FC = () => {
   const [popupVisible, setPopupVisible] = useState(false);
+  const [postText, setPostText] = useState('');
+  const onChangePostTextHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
+    setPostText(e.currentTarget.value);
+  }
+  const addPostHandler = () => {
+    console.log(postText);
+    setPostText('');
+    setPopupVisible(false);
+  }
 
   return (
     <AddPostStyled>
@@ -32,13 +41,22 @@ export const AddPostBlock: FC = () => {
 
       <AddPostPopupStyled visible={popupVisible}>
         <AddPostPopupWrapStyled>
-          <AddPostPopupCloseStyled onClick={() => setPopupVisible(false)}>x</AddPostPopupCloseStyled>
+          <AddPostPopupCloseStyled
+            onClick={() => setPopupVisible(false)}
+          >
+            x
+          </AddPostPopupCloseStyled>
           <AddPostPopupTextStyled
-            id="post-textarea"
+            value={postText}
+            onChange={onChangePostTextHandler}
             placeholder="What's on your mind, Bohdan?"
           >
           </AddPostPopupTextStyled>
-          <AddPostPopupButtonStyled>Publish</AddPostPopupButtonStyled>
+          <AddPostPopupButtonStyled
+            onClick={addPostHandler}
+          >
+            Publish
+          </AddPostPopupButtonStyled>
         </AddPostPopupWrapStyled>
       </AddPostPopupStyled>
     </AddPostStyled>
