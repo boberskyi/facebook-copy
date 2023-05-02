@@ -7,14 +7,18 @@ import {stateType} from "./redux/state";
 
 type AppType = {
   state: stateType
+  addPost: (postText: string) => void
 }
 
-const App:FC<AppType> = ({state}) => {
+const App:FC<AppType> = ({state,addPost}) => {
   return (
     <div className="App">
       <BrowserRouter>
         <Header navLinks={state.navLinks}/>
-        <Main posts={state.posts}/>
+        <Main
+          posts={state.posts}
+          addPost={addPost}
+        />
       </BrowserRouter>
     </div>
   );

@@ -5,13 +5,14 @@ import {PostsType} from "../../../redux/state";
 
 type PostsFeedType = {
   posts: PostsType[]
+  addPost: (postText: string) => void
 }
 
-export const PostsFeed:FC<PostsFeedType> = ({posts}) => {
+export const PostsFeed:FC<PostsFeedType> = ({posts,addPost}) => {
 
   return (
     <>
-      <AddPostBlock/>
+      <AddPostBlock addPost={addPost}/>
       {posts.map(post => {
         return (
           <FeedPost

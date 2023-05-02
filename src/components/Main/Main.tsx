@@ -9,9 +9,10 @@ import {PostsType} from "../../redux/state";
 
 type MainType = {
   posts: PostsType[]
+  addPost: (postText: string) => void
 }
 
-export const Main:FC<MainType> = ({posts}) => {
+export const Main:FC<MainType> = ({posts,addPost}) => {
   return (
     <div className={styleMain.main}>
       <div className={styleMain.mainLeft}>
@@ -21,7 +22,7 @@ export const Main:FC<MainType> = ({posts}) => {
   <main className={styleMain.mainCenter}>
     <Routes>
       <Route path="*" element={<Navigate to="/"/>}/>
-      <Route path="/" element={<PostsFeed posts={posts}/>}/>
+      <Route path="/" element={<PostsFeed posts={posts} addPost={addPost}/>}/>
       <Route path="/marketplace" element={<Marketplace/>}/>
       <Route path="/groups" element={<Groups/>}/>
       <Route path="/events" element={<Events/>}/>

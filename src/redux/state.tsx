@@ -167,3 +167,23 @@ export let state:stateType = {
     },
   ]
 }
+
+export const addPost = (postText: string) => {
+  let newPost = {
+    id: v1(),
+    author: {
+      ava: '',
+      name: 'Autor 2',
+      link: ''
+    },
+    post: {
+      date: '',
+      text: postText,
+      image: '',
+      reactions: '',
+      comments: ''
+    }
+  }
+
+  state.posts.push(newPost);
+}

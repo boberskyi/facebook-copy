@@ -13,14 +13,18 @@ import {
 } from "./AddPostStyles";
 import {ChangeEvent, FC, useState} from "react";
 
-export const AddPostBlock: FC = () => {
+type AddPostBlockType = {
+  addPost: (postText: string) => void
+}
+
+export const AddPostBlock: FC<AddPostBlockType> = ({addPost}) => {
   const [popupVisible, setPopupVisible] = useState(false);
   const [postText, setPostText] = useState('');
   const onChangePostTextHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
     setPostText(e.currentTarget.value);
   }
   const addPostHandler = () => {
-    console.log(postText);
+    addPost(postText);
     setPostText('');
     setPopupVisible(false);
   }
